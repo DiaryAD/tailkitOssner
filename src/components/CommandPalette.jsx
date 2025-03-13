@@ -147,12 +147,12 @@ export default function CommandPalettesBoxedWithCommands() {
       {/* Command Palettes: Boxed with Commands */}
       <div>
         {/* Placeholder */}
-        <div className="flex flex-col items-center justify-center gap-5 rounded-lg border-2 border-dashed border-gray-300 py-48 dark:border-gray-700">
+        <div className="flex items-center justify-center">
           {/* Toggle Button */}
           <button
             onClick={openCommandPalette}
             type="button"
-            className="group inline-flex min-w-56 items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-4 py-2 leading-6 font-medium text-gray-800 hover:border-gray-300 hover:text-gray-900 hover:shadow-xs focus:ring-3 focus:ring-gray-300/25 active:border-gray-200 active:shadow-none dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:border-gray-600 dark:hover:text-gray-200 dark:focus:ring-gray-600/40 dark:active:border-gray-700"
+            className="group inline-flex min-w-56 items-center justify-center gap-2 rounded-lg border border-gray-200 bg-[#E4E4E4] px-4 py-2 ..."
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -187,7 +187,6 @@ export default function CommandPalettesBoxedWithCommands() {
             className="relative z-90"
             onClose={closeCommandPalette}
           >
-
             {/* Command Palette */}
             <TransitionChild
               enter="ease-out duration-150"
@@ -206,7 +205,7 @@ export default function CommandPalettesBoxedWithCommands() {
                     className="flex w-full flex-col rounded-xl shadow-xl dark:text-gray-100 dark:shadow-black/25"
                   >
                     {/* Search Input */}
-                    <div className="relative rounded-t-xl bg-white px-3 pt-3 dark:bg-gray-900">
+                    <div className="relative rounded-t-xl bg-[#E4E4E4] px-3 pt-3 dark:bg-gray-900">
                       <div className="flex w-full items-center rounded-lg bg-gray-100 px-3 dark:bg-gray-800">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -234,7 +233,7 @@ export default function CommandPalettesBoxedWithCommands() {
 
                     {/* Combobox Options */}
                     {filteredOptions.length === 0 && query !== "" ? (
-                      <div className="rounded-b-xl bg-white p-3 dark:bg-gray-900">
+                      <div className="rounded-b-xl bg-[#E4E4E4] p-3 dark:bg-gray-900">
                         <div className="space-y-3 py-1.5 text-center text-sm text-gray-500 dark:text-gray-400">
                           <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -256,7 +255,7 @@ export default function CommandPalettesBoxedWithCommands() {
                     ) : (
                       <ComboboxOptions
                         modal={false}
-                        className="max-h-72 overflow-auto rounded-b-xl bg-white p-3 dark:bg-gray-900"
+                        className="max-h-72 overflow-auto rounded-b-xl bg-[#E4E4E4] p-3 dark:bg-gray-900"
                         static
                       >
                         {filteredOptions.map((option) => (
