@@ -22,7 +22,7 @@ export default function LightSidebarWithMiniSidebar() {
         <aside
           id="page-sidebar"
           aria-label="Main Sidebar Navigation"
-          className={`fixed top-16 bottom-0 left-0 z-20 flex h-full w-full flex-col border-r border-gray-200 bg-white pl-14 transition-transform duration-500 ease-out lg:w-72 dark:border-gray-800 dark:bg-gray-800 dark:text-gray-200 ${
+          className={`fixed top-[35px] bottom-0 left-0 z-20 flex h-full w-full flex-col border-r border-gray-200 bg-white pl-14 transition-transform duration-500 ease-out lg:w-72 dark:border-gray-800 dark:bg-gray-800 dark:text-gray-200 ${
             desktopSidebarOpen ? "lg:translate-x-0" : "lg:-translate-x-full"
           } ${mobileSidebarOpen ? "translate-x-0" : "-translate-x-full"}`}
         >
@@ -186,23 +186,6 @@ export default function LightSidebarWithMiniSidebar() {
                   <path
                     fill-rule="evenodd"
                     d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"
-                  />
-                </svg>
-              </a>
-              <a
-                href="#"
-                className="flex h-10 w-full items-center justify-center rounded-sm text-gray-500 hover:bg-gray-200 hover:text-gray-600 active:bg-gray-200/50 dark:text-gray-300 dark:hover:bg-gray-700 dark:hover:text-gray-100 dark:active:bg-gray-700/5"
-              >
-                <svg
-                  className="hi-solid hi-logout inline-block size-5"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z"
-                    clipRule="evenodd"
                   />
                 </svg>
               </a>
@@ -433,43 +416,11 @@ export default function LightSidebarWithMiniSidebar() {
         {/* Page Header */}
         <header
           id="page-header"
-          className="fixed top-0 right-0 left-0 z-30 flex h-16 flex-none items-center bg-white shadow-sm dark:bg-gray-800"
+          className="fixed top-0 right-0 left-0 z-30 flex h-[35px] flex-none items-center bg-white shadow-sm dark:bg-gray-800"
         >
           <div className="mx-auto flex w-full max-w-10xl justify-between px-4 lg:px-8">
             {/* Left Section */}
-            <div className="flex items-center gap-2">
-              <div className="hidden lg:block">
-                <form onSubmit={(e) => e.preventDefault()}>
-                  <input
-                    type="text"
-                    className="block w-full rounded-lg border border-gray-200 py-2 text-sm leading-5 placeholder-gray-400 focus:border-teal-500 focus:ring-3 focus:ring-teal-500/50 dark:border-gray-700 dark:bg-gray-900/25 dark:focus:border-teal-500"
-                    id="search"
-                    name="search"
-                    placeholder="Search.."
-                  />
-                </form>
-              </div>
-              <div className="lg:hidden">
-                <button
-                  type="button"
-                  className="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm leading-5 font-semibold text-gray-800 hover:border-gray-300 hover:text-gray-900 hover:shadow-xs focus:ring-3 focus:ring-gray-300/25 active:border-gray-200 active:shadow-none dark:border-gray-700 dark:bg-gray-800 dark:text-gray-300 dark:hover:border-gray-600 dark:hover:text-gray-200 dark:focus:ring-gray-600/40 dark:active:border-gray-700"
-                >
-                  <svg
-                    className="hi-solid hi-search inline-block size-5"
-                    fill="currentColor"
-                    viewBox="0 0 20 20"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </button>
-              </div>
-              {/* END Search */}
-            </div>
+            <div className="flex items-center gap-2"></div>
             {/* END Left Section */}
 
             {/* Center Section */}
@@ -498,9 +449,7 @@ export default function LightSidebarWithMiniSidebar() {
         {/* Page Content */}
         <main
           id="page-content"
-          className={`flex max-w-full flex-auto flex-col pt-16 ${
-            desktopSidebarOpen ? "lg:ml-72" : ""
-          }`}
+          className={`flex max-w-full flex-auto flex-col pt-[35px] ${desktopSidebarOpen ? "lg:ml-72" : ""}`}
         >
           {/* Page Section */}
           <div className="mx-auto w-full max-w-10xl p-4 lg:p-8">
