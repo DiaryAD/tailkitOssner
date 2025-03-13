@@ -90,7 +90,7 @@ export default function CommandPalettesBoxedWithCommands() {
   //
   /////////////////////////////////////////
 
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const closeCommandPalette = () => {
     setIsOpen(false);
@@ -187,18 +187,6 @@ export default function CommandPalettesBoxedWithCommands() {
             className="relative z-90"
             onClose={closeCommandPalette}
           >
-            {/* Backdrop */}
-            <TransitionChild
-              enter="ease-out duration-150"
-              enterFrom="opacity-0"
-              enterTo="opacity-100"
-              leave="ease-in duration-100"
-              leaveFrom="opacity-100"
-              leaveTo="opacity-0"
-            >
-              <div className="fixed inset-0 bg-gray-300/75 backdrop-blur-xs dark:bg-gray-800/75" />
-            </TransitionChild>
-            {/* END Backdrop */}
 
             {/* Command Palette */}
             <TransitionChild
